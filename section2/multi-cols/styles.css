@@ -1,0 +1,17 @@
+section {
+  -webkit-columns: 4;
+  -moz-columns: 4;
+  -o-columns: 4;
+  columns: 4;
+
+  column-gap: 40px;
+  text-align: justify;
+  hyphens: auto; /* ne semble pas fonctionner sur chrome linux */
+
+  column-rule: 2px orange dashed;
+}
+
+section h2 {
+  column-span: none; /* all: le titre s'étale sur plusieurs colonnes */
+  break-before:column; /* saut de colonne : le titre en position initiale */
+}

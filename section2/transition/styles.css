@@ -1,0 +1,39 @@
+/* Animation CSS3 */
+@keyframes anim1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(150px) rotate(45deg);
+  }
+}
+
+#div1 {
+  width: 200px;
+  height: 150px;
+  background-color: orange;
+  transition-property: background-color, width;
+  transition-duration: 2s;
+  transition-delay: .3s;
+  /*transition-timing-function: ease;*/
+  transition-timing-function: cubic-bezier(.44,.85,.8,.22); /* http://cubic-bezier.com*/
+}
+
+#div1:hover {
+  background-color: red;
+  width: 300px
+}
+
+#div2 {
+  margin-top: 40px;
+  width: 100px;
+  height: 50px;
+  background-color: pink;
+}
+
+#div2:hover {
+  animation: anim1 4s
+}

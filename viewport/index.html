@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://opusidea.net/formation/viewport -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Comprendre le Viewport</title>
+
+		<meta name="description" content="Application basique permettant de comprendre le Viewport">
+		<meta name="author" content="Christophe Dufour">
+		<meta name="copyright" content="© OPUS IDEA">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+		<style>
+		#explain {
+			position: absolute;
+			top: 70px;
+			right: 10px;
+			border-radius: 0 0 6px 6px;
+			background: linear-gradient(orange, yellow);
+			width: 300px;
+			color: black;
+			font-size: .9em;
+			padding: 10px;
+			letter-spacing: 1px;
+			display: none;
+			box-shadow: 0 0 8px #222;
+		}
+		#explain ul {
+			padding: 0;
+			list-style: none;
+		}
+		#explain li {
+			padding: 4px 0;
+		}
+		.iphone6 {
+			width: 455px;
+			height: 885px;
+			background: url('img/iphone6-bg.png') no-repeat;
+			background-size: 455px 885px;
+		}
+		.iphone6 #wrapper {
+			width: 375px !important;
+			height: 627px;
+			overflow-y: auto;
+			position: relative;
+			top: 117px;
+			left: 36px;;
+		}
+
+		#control {
+			height: 60px;
+			background-color: #333;
+			color: #fefefe;
+			padding: 6px;
+			box-sizing: border-box;
+		}
+		#control div {
+			display: none;
+		}
+
+		#iphone6 {
+			cursor: pointer;
+		}
+		body {
+			font-family: arial, helvetica, sans-serif;
+			padding: 0;
+			margin: 0;
+		}
+		h1 {
+			font-size: 2.8em;
+			margin:0;
+		}
+		h2 {
+			font-size: 2.2em;
+		}
+		#main {
+			padding: 4px;
+			width: 960px;
+			margin: auto;
+		}
+		#article1 {
+			width: 70%;
+			float: left;
+			padding-right: 20px;
+			box-sizing: border-box;
+			text-align: justify;
+		}
+		#aside1 {
+			width: 30%;
+			float: left;
+			background-color: #ccc;
+			padding: 18px;
+			box-sizing: border-box;
+		}
+		p:first-of-type {
+			margin-top: 0;
+		}
+		#device-width {
+			display: none;
+		}
+		.mq #article1, .mq #aside1 {
+			width: 100%;
+			float: none;
+			padding:2px;
+		}
+		.mq h1 {
+			font-size: 1.8em;
+		}
+		.mq h2 {
+			font-size: 1.4em;
+		}
+		#contents.not-ok #window-width, #contents.not-ok #scale, #contents.not-ok #mq {
+			color: red;
+		}
+
+		#contents.ok #window-width, #contents.ok #scale, #contents.ok #mq {
+			color: green;
+		}
+
+		/*
+		@media screen and (max-width:400px) {
+			#main {
+				width: 375px;
+			}
+			#article1, #aside1 {
+				width: 100%;
+				float: none;
+			}
+		}
+		*/
+		</style>
+	</head>
+	<body>
+		<div id="control">
+			<input id="iphone6" type="checkbox">Simuler un affichage iPhone 6 (375x627)
+			<div>
+				<input id="viewport" type="checkbox">Utilisation de la balise Viewport
+			</div>
+		</div>
+
+		<section id="main">
+			<div id="wrapper">
+			<div id="contents" class="ok">
+				<h1>
+					Largeur de la fenêtre du navigateur: <span id="window-width">1535px</span>
+					<div id="device-width">Largeur de l'écran du mobile: <span style="color:#666">375px</span></div>
+				</h1>
+				<h2>Echelle: <span id="scale">1</span><br>@media (max-width:400px): <span id="mq">non</span></h2>
+				<article id="article1">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie iaculis sollicitudin. Ut massa odio, tristique eget consequat vitae, lacinia et ipsum. Maecenas urna ex, rhoncus ac nibh volutpat, euismod pretium nisl. Fusce quis aliquet ante, ut consectetur justo. Maecenas blandit blandit ipsum, vitae molestie enim molestie bibendum. Donec pellentesque diam ex. Phasellus cursus volutpat tristique. Vestibulum ornare eu magna non tempus. Phasellus efficitur, metus ac fringilla vehicula, nibh nibh feugiat eros, ut blandit est ligula sed lectus.
+Vivamus sit amet lorem ex. Suspendisse a ullamcorper ante. Aenean vehicula massa id mollis feugiat. Sed id purus sed nibh sollicitudin auctor. Maecenas fermentum gravida ipsum, nec lacinia erat euismod ut. Sed at nunc et arcu porttitor condimentum. Aliquam erat volutpat. Cras volutpat risus a luctus congue. Aenean vel diam vel quam placerat consequat vitae venenatis ex. Phasellus egestas dictum lectus, quis hendrerit dui ultricies quis. In nec augue sem.
+Nam sapien eros, ornare ac justo consectetur, fringilla dignissim risus. Donec arcu quam, porttitor et blandit at, semper ac ipsum. Vivamus quis justo dignissim, egestas velit eu, laoreet dolor. Sed elit nunc, facilisis id augue at, egestas tempus mauris. Suspendisse aliquet ac mi eu consectetur. Aliquam tempus tortor at felis fermentum aliquam. Curabitur ac magna ipsum. Donec porttitor diam a risus molestie fermentum. Aenean commodo nunc vitae massa tristique gravida. Nullam et nulla cursus, sollicitudin nisl sed, lacinia dui. Maecenas vel nunc a risus pulvinar facilisis. Donec blandit nunc at tristique sollicitudin. Sed facilisis tincidunt ligula, at consectetur sem auctor nec.</p>
+
+					<p>Nullam tristique gravida pulvinar. Quisque vitae sagittis dolor. Quisque ut lacinia sem. Suspendisse metus nisl, tempus quis semper nec, lacinia eu nisl. Nunc ac varius est. Integer non efficitur lectus, eu blandit enim. Praesent vitae risus mattis, porta risus ut, sagittis nunc. In sagittis, sapien non consectetur luctus, ante arcu elementum sapien, vel placerat lectus elit quis nulla.</p>
+
+					<p>Nam egestas elit lacus, a vehicula diam condimentum at. Vestibulum in odio luctus, fermentum felis sit amet, lobortis metus. Sed dignissim laoreet purus ut faucibus. Suspendisse id luctus nisi, vitae placerat massa. Mauris a elit vel ligula elementum finibus ac et arcu. Vivamus vel purus pretium lorem mollis semper. Aenean diam neque, gravida vel turpis sit amet, sollicitudin placerat metus.</p>
+
+					<p>Nullam sollicitudin dignissim elit et molestie. Suspendisse mauris lacus, commodo vel iaculis dictum, tincidunt sed erat. Pellentesque malesuada diam orci, id luctus justo finibus in. Maecenas quis nunc mauris. Donec sagittis vestibulum ipsum, et condimentum lectus tristique at. Aliquam vehicula ac tortor volutpat pretium. Nam ultrices eleifend est, vitae eleifend elit tristique tristique. Etiam mollis diam ex, nec ultrices erat porta sit amet.</p>
+
+					<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus ac scelerisque lectus. Suspendisse potenti. Suspendisse potenti. Nullam imperdiet, sapien et posuere mattis, purus dolor consequat turpis, at egestas elit lacus id erat. Nulla interdum tempor nulla vel vehicula. Proin augue purus, lacinia id auctor vel, semper id elit. Etiam congue, augue et tempus malesuada, risus nulla accumsan elit, ac molestie massa odio vitae metus. Integer ut nulla at felis tristique vulputate.</p>
+
+					<p>Integer nibh neque, venenatis sed diam ac, condimentum tempor mauris. Nunc accumsan vel nulla sit amet iaculis. Donec vehicula vel magna nec efficitur. In lacinia mi dictum arcu posuere egestas. Phasellus varius velit et quam interdum consequat. Praesent eu suscipit felis, in interdum mauris. Pellentesque et viverra ex, eu mollis dolor. Aliquam aliquet consequat massa quis vehicula. Suspendisse malesuada a purus vel imperdiet. Aenean imperdiet quam ut purus venenatis, ac egestas nisi placerat. Fusce sit amet pellentesque lectus. Donec mattis condimentum lorem, at efficitur sapien vehicula nec.</p>
+
+					<p>Nam facilisis purus a magna dignissim dignissim. Vestibulum volutpat velit et est sodales, et suscipit lectus viverra. Aenean tincidunt nisl nec libero ultricies interdum. Curabitur nec varius nisi, in aliquam massa. Etiam fermentum, quam ac ullamcorper malesuada, justo lorem aliquam nibh, et pellentesque lorem enim non nisi. Phasellus suscipit ipsum ac arcu lobortis egestas. Vestibulum vitae lectus non diam tempus tempor. Pellentesque auctor orci quis felis pulvinar scelerisque. Donec euismod velit ante, eu tincidunt nisi posuere a. Mauris a justo at mi dictum ornare in vel sem. Sed non odio a augue tempor semper.</p>
+
+					<p>Curabitur feugiat elit sit amet mauris venenatis posuere. Nunc eu aliquam magna. Vivamus gravida lacus eget sem sollicitudin bibendum. Nulla aliquet non orci accumsan tristique. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tempor tellus vel vestibulum feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla volutpat ornare egestas. Suspendisse faucibus felis metus, vitae elementum nisl tincidunt vitae. Vivamus sit amet leo auctor, tempus enim quis, aliquam sapien. Maecenas eget leo eu risus lacinia placerat. Pellentesque a luctus felis, at tempus ipsum.</p>
+
+					<p>Quisque quis nibh orci. Curabitur tincidunt quam ac viverra tempor. Integer euismod suscipit arcu, sit amet rutrum massa. Nullam tortor elit, dictum quis sapien nec, luctus imperdiet nisl. Integer lacinia volutpat metus, sit amet porttitor risus pellentesque et. Phasellus vitae urna sed orci finibus tempor ut rutrum neque. Morbi quis porttitor elit. Integer quis sem tempor, scelerisque sapien nec, ornare velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+					<p>Sed sed lacus aliquam, volutpat tortor ut, congue tellus. Mauris rutrum eros at lorem ornare, eget placerat orci pellentesque. Maecenas tincidunt mi et pharetra ornare. Morbi leo urna, ultrices eu tempus ut, dapibus id diam. Proin rutrum finibus hendrerit. Suspendisse potenti. Morbi commodo id turpis vitae facilisis. Ut aliquet sit amet ex eget volutpat. Pellentesque at vestibulum purus. Phasellus rutrum justo arcu, nec elementum mauris faucibus nec. Mauris facilisis arcu quis urna tempor, quis pulvinar urna eleifend. Nam fringilla eget odio sagittis accumsan. Quisque a ultricies arcu. Proin gravida porta eros, id accumsan elit sagittis sit amet.</p>
+
+					<p>Morbi justo erat, posuere ac malesuada a, auctor ac augue. Donec pellentesque, tellus nec laoreet auctor, diam nulla fermentum tortor, viverra dignissim neque libero eget mauris. Vivamus convallis egestas urna, quis sodales felis dictum non. Nam faucibus velit ullamcorper consectetur egestas. Sed auctor laoreet varius. Nam ac viverra erat, et ullamcorper dui. Curabitur sed dui aliquet, faucibus ipsum id, lacinia nisi. Integer a sagittis purus, in fermentum augue. Cras a enim viverra, porttitor urna eu, porta sem.</p>
+
+					<p>ullam et lacus eget augue rutrum fermentum. Praesent condimentum velit eu massa tincidunt, nec pretium sem tristique. Donec eleifend erat in neque porta, auctor varius nulla porta. Ut posuere mi in est elementum, ac rhoncus diam imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam id felis sollicitudin, convallis lacus vel, egestas nisi. Sed in ligula justo. Donec pharetra lorem id elit pharetra, sit amet porta nunc tristique. Morbi dignissim neque a nunc malesuada tempus. Donec vel libero quis est volutpat tempus. Pellentesque vulputate odio vitae purus feugiat, id placerat nunc vulputate. Fusce lacinia ipsum vitae quam dictum, id fringilla tellus aliquet. Morbi et nisi nibh. Morbi laoreet ligula id ligula imperdiet, at tempus ex lobortis. Nulla sollicitudin nisi sed arcu faucibus, ac finibus diam convallis. Phasellus sed laoreet ligula.</p>
+				</article>
+				<aside id="aside1">
+					<p><strong>Aside</strong></p>
+					<p>Nullam tristique gravida pulvinar. Quisque vitae sagittis dolor. Quisque ut lacinia sem. Suspendisse metus nisl, tempus quis semper nec, lacinia eu nisl. Nunc ac varius est. Integer non efficitur lectus, eu blandit enim. Praesent vitae risus mattis, porta risus ut, sagittis nunc. In sagittis, sapien non consectetur luctus, ante arcu elementum sapien, vel placerat lectus elit quis nulla.</p>
+				</aside>
+			</div>
+		</div>
+		</section>
+
+		<div id="explain">
+			<p>L'iPhone 6 à une largeur écran (surface réelle) de 375px tandis que son
+navigateur web, safari mobile, à un viewport (surface virtuelle) de 980px. Cette surface virtuelle permet au navigateur d'afficher des sites allant jusqu'à 980px de large sans scroll horizontal.</p>
+			<p>Pour afficher une site de 980px sur un écran de 375px de large, safari mobile effectue un zoom arrière selon le ratio: (largeur écran) / (largeur viewport), soit ici 375/980 = 0.38. Il affiche donc le site à environ 40% de sa taille réelle, ce qui rend la lecture du contenu difficile</p>
+			<p>Tant qu'on n'indique pas au navigateur, par le biais de la balise <strong>Viewport</strong>, qu'on veut que la surface virtuelle du navigateur soit égale à la largeur du terminal (width=device-width), le navigateur mobile maintient sa largeur de fenêtre à 980px mais avec un zoom arrière. <br>Les media queries se basant sur une largeur maximale de 400px, par exemple, pour effectuer des modifications de mise en page, ne peuvent pas être exécutées</p>
+			<p><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</strong> résout ce problème</p>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script>
+
+		window.onload = function() {
+			//window.resizeTo(980, 600); works only with new windows (popup) in Chrome
+			displayWindowWidth();
+		}
+
+		window.onresize = function() {
+			displayWindowWidth();
+		}
+
+		function displayWindowWidth() {
+			var ck = document.getElementById('iphone6').checked;
+			if (!ck) {
+				var w = document.getElementById('window-width');
+				w.innerHTML = window.innerWidth + 'px';
+			}
+		}
+
+		$(document).ready(function(){
+
+			$('#iphone6').click(function() {
+				if ($(this).prop('checked')) {
+					mobileView();
+				} else {
+					displayWindowWidth();
+					desktopView();
+				}
+			})
+
+			$('#viewport').click(function() {
+				if ($(this).prop('checked')) {
+					enMediaQuery();
+				} else {
+					disMediaQuery();
+				}
+
+			})
+
+			function desktopView() {
+				$('#main').removeClass('iphone6');
+				$('#contents').css({'zoom':1}).removeClass('mq');
+				$('#viewport').prop('checked', false);
+				$('#scale').text('1');
+				$('#iphone6').next('div').hide();
+				$('#explain').hide();
+				$('#article1, #aside1', 'h2').removeClass('media-query');
+				$('#contents').removeClass('not-ok').addClass('ok');
+				$('#mq').text('non');
+				$('#device-width').hide();
+			}
+
+			function mobileView() {
+				$('#main').addClass('iphone6');
+				$('#contents').css({'zoom':0.38});
+				$('#window-width').text('980px');
+				$('#scale').text('0.38');
+				$('#iphone6').next('div').show();
+				$('#explain').show();
+				$('#contents').removeClass('ok').addClass('not-ok');
+				$('#device-width').show();
+			}
+
+			function enMediaQuery() {
+				$('#window-width').text('375px').addClass('ok');
+				$('#contents').css({'zoom':1}).addClass('mq');
+				$('#scale').text('1');
+				$('#contents').removeClass('not-ok').addClass('ok');
+				$('#mq').text('oui');
+			}
+
+			function disMediaQuery() {
+				$('#window-width').text('980px');
+				$('#contents').css({'zoom':0.38}).removeClass('mq');
+				$('#scale').text('0.38');
+				$('#article1, #aside1', 'h2').removeClass('media-query');
+				$('#contents').removeClass('ok').addClass('not-ok');
+				$('#mq').text('non');
+			}
+
+		})
+
+		</script>
+
+
+
+</body></html>

@@ -1,0 +1,2 @@
+fichier6.txt:Burdy,rruc_mdp_opm,19/20
+fichier6.txt:Brice,adfg_mdp_hbv,10/20

@@ -1,0 +1,19 @@
+img {
+  width: 200px
+}
+
+#img1 {
+}
+
+#img1:hover {
+  transform: rotate(20deg);
+  /*transform-origin: 0 0; /* pivote depuis l'angle supérieur gauche */*/
+  transform-origin: 50% 50%; /* pivote depuis son centre */
+}
+
+#img2:hover {
+  /*transform: scale(1.2); zoom de 20% */
+  /*transform: translate(30px, 10px); /* se déplace de 30px vers la droite et 10 vers le bas */
+  /*transform: skew(30deg) distortion de 30° */
+  transform: scale(1.2) translate(100px, 50px);
+}

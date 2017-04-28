@@ -1,0 +1,12 @@
+$color: #4422DD;
+$size: 100px;
+
+p {
+  color: $color
+}
+
+div {
+  width: 200px;
+  height: $size;
+  background-image: linear-gradient(green, $color);
+}

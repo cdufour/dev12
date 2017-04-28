@@ -1,0 +1,11 @@
+$fs: 3em;
+
+.menu {
+  h1 {
+    font-size: $fs
+  }
+
+  header {
+    border-top: 1px #ccc dashed
+  }
+}

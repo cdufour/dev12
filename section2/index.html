@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Index</title>
+    <style>
+    h1, h2 {
+      color: blue
+    }
+
+    h1 {
+      /*opacity:0*/
+      display: none
+    }
+
+    section.exemple {
+      font-weight: bold
+    }
+
+    div#carousel {
+      font-style: italic;
+    }
+
+    /* donner à toutes les images une largeur de 100px */
+    /*img {
+      width: 100px
+    }*/
+
+    div#carousel img {
+      width: 100px
+    }
+
+    div#carousel img:hover {
+      border: 4px green dotted
+    }
+
+    /* afficher en orange les liens placés dans les pied de page de sections */
+    /*section > footer a { ne s'applique qu'au descendant direct*/
+    section footer a {
+      color: orange
+    }
+
+    p + img { /* sélectionne les images précédées par un paragraphe */
+      border-bottom: 4px pink solid;
+      border-radius: 4px
+    }
+
+    a[target] { /* sélectionne les balises a disposant de l'attribut target (liens externes) */
+      text-decoration: none
+    }
+
+    header nav a {
+      text-transform: capitalize;
+    }
+
+    header nav ul {
+      list-style: none;
+    }
+
+    header nav ul li {
+      display: inline;
+    }
+
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="tableau.html">tableau</a></li>
+          <li><a href="box-model.html">Box Model</a></li>
+          <li><a href="background.html">Background</a></li>
+          <li><a href="multi-cols/">Multi Cols</a></li>
+          <li><a href="gradients/">Dégradés</a></li>
+          <li><a href="transform/">Transformations</a></li>
+          <li><a href="transition/">Transitions</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 style="font-size:8em;color:red">Titre principal</h1>
+
+      <div id="carousel">
+        <p>En cours de construction</p>
+        <img src="images/img1.png" alt="">
+        <span>Image lorempixel</span>
+      </div>
+
+      <img src="images/img2.png" alt="">
+      <p>Paragraphe vide</p>
+      <span>Image lorempixel</span>
+
+      <section class="exemple">
+        <p>
+          <strong>
+            <em>Premier paragraphe</em>
+          </strong>
+        </p>
+        <p>
+          Le langage HTML n'est pas un langage de programmation<br>Markup langage :
+        </p>
+        <ul>
+          <li>langage de structuration/description (statique)</li>
+          <li>langage à balises</li>
+        </ul>
+        <p>Le protocole HTTP est stateless
+          (il est nécessaire de redemander les ressources au serveur pour les rafraîchir)</p>
+        <p>Pour d'infos sur <a target="_blank" href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language">Wikipedia</a></p>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+      <header>
+        <h2>Entête de la section</h2>
+      </header>
+      <article>
+        <h3>Titre de l'article</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sapiente corporis eligendi natus dignissimos modi exercitationem, esse quae.</p>
+        <p>At nulla quisquam esse, doloremque dicta nostrum? Mollitia eum praesentium deleniti perferendis.</p>
+      </article>
+      <aside>Infos complémentaires relatives au premier article</aside>
+      <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum atque eum accusantium praesentium rem possimus quidem quo iusto ea delectus cumque aliquid, obcaecati reiciendis temporibus, repudiandae, minus labore maxime nesciunt.</article>
+      <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut facilis enim totam dolore eos aliquid sunt dolorem pariatur, perspiciatis quibusdam officia quasi nesciunt hic animi officiis delectus in voluptates beatae!</article>
+      <footer>
+        <p><a href="">Pied de page de la section</a></p>
+      </footer>
+    </section>
+    </aside>
+
+  </body>
+
+<footer>
+  <nav>
+    <ul>
+      <li><a href="">Lien 1</a></li>
+      <li><a href="">Lien 2</a></li>
+      <li><a href="">Lien 3</a></li>
+    </ul>
+  </nav>
+</footer>
+</html>

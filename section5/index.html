@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bower</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <div class="test"></div>
+
+    
+    <!-- Cheatsheet Bootstrap -->
+    <!-- TYPOGRAPHIE -->
+    <div class="container">
+      <h1 class="page-header">Lorem ipsum dolor.</h1>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, facilis suscipit amet. Libero consequuntur sed dolorem optio deserunt, corporis voluptate.</p>
+      <p><mark>Lorem ipsum dolor</mark> sit amet, consectetur adipisicing elit. Possimus suscipit, <del>odio impedit laborum</del>, quod esse delectus praesentium cum, doloribus ipsum in neque incidunt corrupti debitis! Quas pariatur recusandae architecto nulla!</p>
+    </div>
+
+    <hr>
+    <!-- ALIGNEMENT ET TRANSFORMATIONS -->
+    <p class="text-left text-lowercase">Texte aligné à gauche</p>
+    <p class="text-center text-uppercase">Texte centré</p>
+    <p class="text-right text-capitalize">texte aligné à gauche</p>
+
+    <!-- FLOTTEMENT RAPIDE -->
+    <div class="pull-right">Div flottant à droite</div>
+    <div class="pull-left">Div flottant à gauche</div>
+
+    <!-- BLOCKQUOTE -->
+    <blockquote class="blockquote-reverse">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea accusamus maxime soluta culpa, repellat ut veritatis similique. Doloremque eos, magni.</p>
+      <footer>Citation d'<cite>Alexandre Dumas</cite></footer>
+    </blockquote>
+
+    <!-- LISTES -->
+    <ul class="list-unstyled">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <ul class="list-inline">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <!-- COULEURS CONTEXTUELLES -->
+    <p class="text-primary">Ciao a tutti !</p>
+    <p class="text-success">Ciao a tutti !</p>
+    <p class="text-info">Ciao a tutti !</p>
+    <p class="text-warning">Ciao a tutti !</p>
+    <p class="text-danger">Ciao a tutti !</p>
+    <p class="text-muted">Ciao a tutti !</p>
+
+    <!-- COULEURS CONTEXTUELLES D'ARRIERE-PLAN -->
+    <p class="bg-primary">Ciao a tutti !</p>
+    <p class="bg-success">Ciao a tutti !</p>
+    <p class="bg-info">Ciao a tutti !</p>
+    <p class="bg-warning">Ciao a tutti !</p>
+    <p class="bg-danger">Ciao a tutti !</p>
+    <p class="bg-muted">Ciao a tutti !</p>
+
+    <!-- BOUTONS -->
+    <div class="container">
+      <button class="btn btn-default">Bouton</button>
+      <a href="#" class="btn btn-default">Lien</a>
+      <input type="submit" class="btn btn-default" value="Submit">
+      <br>
+      <!-- BOUTONS CONTEXTUELS -->
+      <button class="btn btn-default">Default</button>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-danger">Danger</button>
+      <br>
+      <!-- TAILLE DES BOUTONS -->
+      <button class="btn btn-default btn-lg">Default</button>
+      <button class="btn btn-default">Default</button>
+      <button class="btn btn-primary btn-sm">Small</button>
+      <button class="btn btn-danger btn-xs">XS</button>
+    </div>
+
+    <!-- FORMULAIRE -->
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" class="form-control" placeholder="Tapez votre nom">
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="Tapez votre email">
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-control" placeholder="votre message"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Sexe</label>
+          <select class="form-control">
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- TABLEAUX -->
+    <div class="container">
+      <table class="table table-striped table-bordered table-hover">
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+          <th>Age</th>
+        </tr>
+        <tr class="danger">
+          <td>Leonardo</td>
+          <td>Bonucci</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>Giorgio</td>
+          <td>Chiellini</td>
+          <td>32</td>
+        </tr>
+        <tr class="success">
+          <td>GianLuigi</td>
+          <td>Buffon</td>
+          <td>39</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- WELLS -->
+    <div class="well">Ciao a tutti !</div>
+    <div class="well well-lg">Ciao a tutti !</div>
+    <div class="well well-sm">Ciao a tutti !</div>
+
+    <!-- ALERTES -->
+    <div class="alert alert-success">Une alerte de succes</div>
+    <div class="alert alert-info">Une alerte d'info</div>
+    <div class="alert alert-danger">Une alerte de danger</div>
+
+    <!-- GRILLES -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error eum, veritatis ipsa nobis reiciendis atque mollitia ipsum, expedita suscipit cumque perspiciatis, nulla. Ducimus ex ad laudantium animi placeat minima ipsa!</p>
+        </div>
+        <div class="col-md-4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta ratione unde ab fuga, maiores tempora tenetur consectetur earum atque quia, nesciunt possimus odit quaerat dignissimos ducimus. Fugiat natus hic modi.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, et!</div>
+        <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, vitae.</div>
+        <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, debitis.</div>
+        <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, minima!</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+        <div class="col-md-1">Box</div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

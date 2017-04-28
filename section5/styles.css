@@ -1,0 +1,17 @@
+.test {
+  width: 200px;
+  height: 150px;
+  background-color: orange
+}
+
+@media screen and (min-width: 500px) {
+  .test {
+    background-color: pink
+  }
+}
+
+@media screen and (max-width: 400px) {
+  img{
+    display: none
+  }
+}

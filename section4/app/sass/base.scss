@@ -1,0 +1,63 @@
+$primary_color: #DD7822;
+$secondary_color: #66CCCC;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@import 'reset';
+
+a { color: $primary_color }
+a:hover { color: $secondary_color }
+
+h1 {
+  color: $primary_color
+}
+
+@import 'menu';
+
+@import 'heritage';
+
+nav {
+  border: 2px orange solid;
+
+  ul {
+    list-style: none;
+    margin-left: 10px;
+
+    a {
+      text-decoration: none;
+      color: $primary_color
+    }
+  }
+}
+
+.box {
+  background-color: $secondary_color;
+  @include border-radius(8px);
+}
+
+
+/* sass permet de faire des opérations */
+$offset: 4px;
+
+img {
+  @include border-radius(4px);
+  width: 140 + 160px;
+  position: relative;
+  left: 100 * $offset
+}
+
+.container { width:100% }
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+aside[role="complementary"] {
+  float: right;
+  width: 360px / 960px * 100%
+}

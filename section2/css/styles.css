@@ -1,0 +1,62 @@
+section {
+  position: relative;
+  left: 100px
+}
+
+div {
+  height: 100px;
+  width: 200px;
+  background-color: #FF0000;
+  color: rgb(255, 255, 255);
+  padding: 20px 0 20px 40px; /* haut droite bas gauche */
+  margin: 0 0 20px 0;
+  position:relative;
+  z-index: 1;
+  /*top: 80px;
+  left: 100px*/
+}
+
+img {
+  /*margin-top: -80px;*/
+  width: 250px;
+  z-index:2;
+  position: relative;
+  top: 0;
+  left: 0
+}
+
+a, h5 {
+  border-top: 2px orange solid;
+  border-bottom: 2px orange solid
+}
+
+a {
+  display: block
+}
+
+header {
+  background-image: url('../images/img1.png');
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+.icon {
+  padding: 0;
+  width: 40px;
+  height: 30px;
+  background: url('../images/sprites.png');
+  display: inline-block;
+}
+
+.microscope {
+  background-position: -10px -180px;
+}
+
+.heart {
+  background-position: -10px -1200px;
+}
+
+i.heart:hover {
+  cursor: pointer;
+  background-position: -630px -1940px;
+}
