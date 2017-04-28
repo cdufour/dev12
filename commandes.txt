@@ -1,0 +1,66 @@
+*** SSH ***
+# afficher le contenu dossier dossier .ssh
+ls -al ~/.ssh
+
+# générer une clé
+ssh-keygen -t rsa -b 4096 -C ‘votre@adresse.email’
+
+# ajouter une à l’agent d’authentification
+ssh-add ~/.ssh/id_rsa # répond: identity added…
+
+# tester la connexion ssh (avec Github)
+ssh -T git@github.com
+
+# copier le clé public dans le pasteboard (Mac)
+pbcopy < ~/.ssh/id_rsa.pub
+
+
+*** Git/Github ***
+# commandes de bases
+git init
+git status
+git add
+git commit -m « message descriptif »
+git log # affiche les commits
+git checkout (numéro sha de la version) # se positionne sur une version
+git push origin master # envoie le code sur la branche master de origin (ex: Github)
+git clone git@github.com:user/repository.git # fait une copie locale d’un repo distant
+git pull origin master # reçoit le code depuis l'origin
+
+# ajouter une origine en HTTS
+git remote add origin https://github.com/user/repository.git
+
+# ajouter une origine en SSH 
+git remote add origin git@github.com:user/repository.git
+
+# changer l'origin
+git remote set-url origin git://new.url.here
+
+# branches
+git branch # liste les branches
+git branch nouvelle-branche # crée une nouvelle branche
+git checkout nouvelle-branche # se positionne sur une branche
+git checkout -b nouvelle-branche # crée et se positionne sur la branche
+git merge branche-a-fusionner # fusionne une branche avec la branche active
+git branch -d branche-a-supprimer # supprime une branche localement
+git push origin --delete branche-a-supprimer # supprimer une branche sur le serveur distant
+
+
+*** Node/Npm ***
+# installation sur Ubuntu
+# https://nodejs.org/en/download/package-manager/
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+
+
+*** Bower ***
+# installation (nécessite node/npm)
+npm install bower -g
+
+# commandes de base
+bower init # génère un fichier bower.json
+bower install query # installe jQuery (dans le dossier bower_components) sans enregistrement dans bower.json
+bower install bootstrap # installe bootstrap en l’enregistrant dans bower.json
+bower uninstall query # désinstalle jQuery
+bower install # installe toutes les dépendances enregistrées dans bower.json
